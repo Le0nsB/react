@@ -1,0 +1,49 @@
+.flower {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+}
+
+.flower-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.center-flower {
+    width: 80px;
+    position: absolute;
+    top: 50%;
+   
+    transform: translate(-25.5%, -12.5%);
+}
+
+.petal {
+    position: absolute;
+    top: 50%;
+    
+    width: 40px;
+    transform-origin: center 30px;
+    transition: all ease-in-out;
+}
+
+/* 🌬️ Falling animation */
+.falling {
+    animation: fall 1.2s forwards ease-in;
+    z-index: 0;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.5) rotate(90deg);
+    }
+}
